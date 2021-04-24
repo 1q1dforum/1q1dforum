@@ -1,0 +1,14 @@
+.. _Answers:
+
+.. toctree::
+    :caption: Answer List
+    :maxdepth: 2
+
+===============
+Answer List
+===============
+
+.. toctree::
+    :maxdepth: 2
+
+    staticvariable

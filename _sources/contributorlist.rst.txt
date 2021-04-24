@@ -1,0 +1,9 @@
+.. _contributorlist:
+
+==================
+Contributor's List
+==================
+
+List of people without whom questions list and answers won't be possible. Many thanks to them:
+
+    #. Abhishek Nema

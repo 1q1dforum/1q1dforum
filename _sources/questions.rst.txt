@@ -1,0 +1,12 @@
+.. _Question:
+
+=============
+Question List
+=============
+
+#. Static Variable 
+    * Static Variable and its use in C Programming?
+    * How scope of static variable defined in executable?
+    * How local static variables are managed?
+    * If static variables are stored in global memory area, then two local variables are defined with the same name in two different functions, will my code compile?
+

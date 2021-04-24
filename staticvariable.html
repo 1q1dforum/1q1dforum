@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Static Variable &mdash; 1Q1D  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contribute" href="contribute.html" />
+    <link rel="prev" title="Answer List" href="answers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> 1Q1D
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="questions.html">Question List</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="answers.html">Answer List</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Static Variable</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#memory-management-for-c-c-programs">Memory Management for C/C++ Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sample-code">Sample Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#executable-s-objectdump">Executable’s Objectdump</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#youtube-video-for-static-variable">Youtube Video for Static Variable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributorlist.html">Contributor's List</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">1Q1D</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="answers.html">Answer List</a> &raquo;</li>
+        
+      <li>Static Variable</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/staticvariable.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="static-variable">
+<h1>Static Variable<a class="headerlink" href="#static-variable" title="Permalink to this headline">¶</a></h1>
+<p>Static keyword is used as scope specifier in C/C++ programming. It makes scope limited to file scope  or function scope.
+File scope if variable defined as global in file and function scope if variable is define locally to function.</p>
+<p>In below mentioned code ‘s_var’ is defined as static at file level and ‘l_var’ is defined in multiple functions(func1, func2 and main).</p>
+<section id="memory-management-for-c-c-programs">
+<h2>Memory Management for C/C++ Programs<a class="headerlink" href="#memory-management-for-c-c-programs" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/Stack.png"><img alt="Alt text in punctuated sentences or phrases." src="_images/Stack.png" style="width: 400px;" /></a>
+<p>In general</p>
+<ol class="arabic simple">
+<li><p>The initialized static variable is stored in the initialized data segment.</p></li>
+<li><p>The uninitialized static variable is stored in the BSS segment.</p></li>
+<li><p>Static variable(initialized to 0) is also stored in the BSS segment.</p></li>
+<li><p>Compiler prepend function name to local static variable to distinguish static variables with same names in different functions.</p></li>
+</ol>
+</section>
+<section id="sample-code">
+<h2>Sample Code<a class="headerlink" href="#sample-code" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cm">/*************************************************************************************</span>
+<span class="cm">Sample code fos Static Keyword</span>
+<span class="cm">*************************************************************************************/</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="k">static</span> <span class="kt">int</span> <span class="n">s_var</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">func1</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+  <span class="k">static</span> <span class="kt">int</span> <span class="n">l_var</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">func2</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+  <span class="k">static</span> <span class="kt">int</span> <span class="n">l_var</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+  <span class="k">static</span> <span class="kt">int</span> <span class="n">l_var</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;s_var:%d, l_var:%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">s_var</span><span class="p">,</span><span class="n">l_var</span><span class="p">);</span>
+  <span class="n">func1</span><span class="p">();</span>
+  <span class="n">func2</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="executable-s-objectdump">
+<h2>Executable’s Objectdump<a class="headerlink" href="#executable-s-objectdump" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/Obj.png"><img alt="Object dump utility." src="_images/Obj.png" style="width: 400px;" /></a>
+<p>Objdump utility is used to get contents of object file.
+In above image you can notice ‘l_var’ is prepended with _function name, this provides unique name to each local static variable and in case of two static variables with same name in two different function our code will compile.</p>
+<p>Here we have used below command to get obj dump info</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#objdump -D &lt;file name&gt;</span>
+</pre></div>
+</div>
+<p>For further info use “man objdump” to get more information on objdump utility.</p>
+</section>
+<section id="youtube-video-for-static-variable">
+<h2>Youtube Video for Static Variable<a class="headerlink" href="#youtube-video-for-static-variable" title="Permalink to this headline">¶</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6GcMCQkRTMs" title="YouTube video     player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><a class="reference internal image-reference" href="_images/StaticVariableQR.png"><img alt="QR for YouTube video." src="_images/StaticVariableQR.png" style="width: 70px;" /></a>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="contribute.html" class="btn btn-neutral float-right" title="Contribute" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="answers.html" class="btn btn-neutral float-left" title="Answer List" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

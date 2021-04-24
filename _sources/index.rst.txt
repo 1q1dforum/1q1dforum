@@ -1,0 +1,28 @@
+
+============
+Introduction
+============
+
+1Q1D (One Question in one Day) is a platform on which we are discussing programming concepts and try to answer questions which are generally asked in interviews.
+1Q1D basically refers to C/C++ programming, Embedded Systems and Linux OS concepts and try to explain them in brief.       
+
+
+.. toctree::
+    :maxdepth: 1
+
+    Question List <questions>
+    Answers <answers>
+    How to contribute <contribute> 
+    Contributor's List <contributorlist>
+
+.. warning::
+
+    This document is under early stage development. If you find errors, please raise an `issue <https://github.com/abhinema/1q1d/issues>`_ or `contribute <https://forms.gle/s6Gp9vUqrQNc1pRx9>`_ a better definition!
+
+
+.. Indices and tables
+.. ------------------
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
